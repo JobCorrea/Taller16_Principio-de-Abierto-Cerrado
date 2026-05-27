@@ -13,5 +13,15 @@ public class Main{
         Documento excel = new DocumentoExcel("Psicologia oscura");
 
         pdf.exportar(); word.exportar(); excel.exportar();
+        System.out.println("________________________");
+
+        Mensajero email = new MensajeroEmail("Pipa23@gmail.com");
+        Mensajero sms = new MensajeSMS(231452478);
+        Mensajero push = new MensajePush("XIAOMI MIO");
+
+        email.mensaje("Bienvenido a la UDC");
+        sms.mensaje("Usted a recibido una llamada el '26-05-2026'");
+        push.mensaje("Tienes una nueva notificacion ");
+
     }
 }
