@@ -6,5 +6,12 @@ public class Main{
 
         porcentaje.mostrarDescuento(50000);
         fijo.mostrarDescuento(15000);
+        System.out.println("________________________");
+
+        Documento pdf = new DocumentoPDF("Habitos Hatomicos ");
+        Documento word = new DocumentoWord("Las 48 leyes del poder");
+        Documento excel = new DocumentoExcel("Psicologia oscura");
+
+        pdf.exportar(); word.exportar(); excel.exportar();
     }
 }
